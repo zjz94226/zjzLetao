@@ -9,3 +9,17 @@
     $(document).ajaxStop(function () {
         NProgress.done();
     });
+
+    $('.second').prev().on('click', function () {
+        $(this).next().slideToggle();
+    });
+
+    $('.icon_menu').on('click', function () {
+        $('.lt_main').toggleClass('now');
+        $('.lt_aside').toggleClass('now');
+    });
+
+    $('.icon_out').on('click', function () {
+        $('.myModal').modal('show');
+        console.log(111)
+    });
