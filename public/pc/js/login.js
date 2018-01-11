@@ -2,15 +2,6 @@
  * Created by Administrator on 2018/1/11.
  */
 $(function () {
-    NProgress.configure({ showSpinner: false });
-    $(document).ajaxStart(function () {
-        NProgress.start();
-    });
-    $(document).ajaxStop(function () {
-        NProgress.done();
-    });
-
-
     //初始化表单校验插件
     var $form = $('form');
     //不能空 6-12
@@ -22,7 +13,7 @@ $(function () {
         feedbackIcons: {
             valid: 'glyphicon glyphicon-thumbs-up',
             invalid: 'glyphicon glyphicon-thumbs-down',
-            validating: 'glyphicon glyphicon-refresh'
+            validating: 'glyphicon glyphicon-hand-left'
         },
 
         //3. 指定校验字段
