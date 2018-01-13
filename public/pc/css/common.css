@@ -98,7 +98,8 @@ html,body {
 }
 
 .lt_main .breadcrumb {
-    padding: 18px 20px;
+    /*padding: 18px 20px;*/
+    padding-top: 20px;
     background-color: #fff;
 }
 .lt_main .breadcrumb a {
@@ -121,6 +122,11 @@ html,body {
     vertical-align: middle;
 }
 .container-fluid {
-    padding-top: 10px;
+    /*padding-top: 10px;*/
+    padding: 10px 30px 0 30px;
+}
+
+.btn_add {
+    margin-bottom: 25px;
 }
 
