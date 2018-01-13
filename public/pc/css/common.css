@@ -116,3 +116,11 @@ html,body {
     height: 400px;
     
 }
+
+.table.table-bordered td {
+    vertical-align: middle;
+}
+.container-fluid {
+    padding-top: 10px;
+}
+
