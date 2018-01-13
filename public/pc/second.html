@@ -8,61 +8,162 @@
     <link rel="stylesheet" href="./css/common.css">
 </head>
 <body>
-    <div class="lt_aside">
-        <div class="lt_logo">
-            <a href="index.html">
-                <img src="./images/png.png" alt="">
-            </a>
-        </div>
-        <div class="lt_info">
-            <img src="./images/default.jpg" alt="">
-            <p>Super Copter</p>
-        </div>
-        <div class="lt_nav">
-            <ul>
-                <li>
-                    <a href="user.html">
-                        <i class="glyphicon glyphicon-user"></i>
-                        <span>用户管理</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="javascript:;">
-                        <i class="glyphicon glyphicon-equalizer"></i>
-                        <span>分类管理</span>
-                    </a>
-                    <div class="second" style="display: block;">
-                        <a href="first.html">一级分类</a>
-                        <a href="second.html" class="active">二级分类</a>
-                    </div>
-                </li>
-                <li>
-                    <a href="product.html">
-                        <i class="glyphicon glyphicon-tags"></i>
-                        <span>商品管理</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
+<div class="lt_aside">
+    <div class="lt_logo">
+        <a href="index.html">
+            <img src="./images/png.png" alt="">
+        </a>
     </div>
-    <div class="lt_main">
-        <div class="lt_header">
-            <a href="javascript:;" class="icon_menu"><i class="glyphicon glyphicon-list pull-left"> </i>
-            </a>
-            <a href="javascript:;" class="icon_out"> <i class="glyphicon glyphicon-log-out pull-right"> </i>
-            </a>
-        </div>
+    <div class="lt_info">
+        <img src="./images/default.jpg" alt="">
+        <p>Super Copter</p>
+    </div>
+    <div class="lt_nav">
+        <ul>
+            <li>
+                <a href="user.html">
+                    <i class="glyphicon glyphicon-user"></i>
+                    <span>用户管理</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <i class="glyphicon glyphicon-equalizer"></i>
+                    <span>分类管理</span>
+                </a>
+                <div class="second" style="display: block;">
+                    <a href="first.html">一级分类</a>
+                    <a href="javascript:;"  class="active">二级分类</a>
+                </div>
+            </li>
+            <li>
+                <a href="product.html">
+                    <i class="glyphicon glyphicon-tags"></i>
+                    <span>商品管理</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="lt_main">
+    <div class="lt_header">
+        <a href="javascript:;" class="icon_menu"><i class="glyphicon glyphicon-list pull-left"> </i>
+        </a>
+        <a href="javascript:;" class="icon_out"> <i class="glyphicon glyphicon-log-out pull-right"> </i>
+        </a>
+    </div>
+    <div class="container-fluid">
+
         <ol class="breadcrumb">
             <li><a href="index.html">管理首页</a></li>
             <li class="active">分类管理</li>
             <li class="active">二级分类</li>
         </ol>
+        <button class="btn btn-default btn_add">添加分类</button>
+        <table class="table table-bordered text-center" >
+            <thead>
+            <tr>
+                <td>序号</td>
+                <td>一级分类名称</td>
+                <td>二级分类名称</td>
+                <td>二级分类LOGO</td>
+            </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+        <div class="text-right">
+            <ul id="pagintor">
+
+            </ul>
+        </div>
     </div>
-    <script src="./lib/jquery/jquery.min.js"></script>
-    <script src="./lib/bootstrap/js/bootstrap.js"></script>
-    <script src="./lib/bootstrap-validator/js/bootstrapValidator.js"></script>
-    <script src="./lib/nprogress/nprogress.js"></script>
-    <script src="js/commen.js"></script>
-    <script src="./js/index.js"></script>
+</div>
+<div class="modal fade myModal" tabindex="-1">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                <h4 class="modal-title">温馨提示</h4>
+            </div>
+            <div class="modal-body">
+                <p class="text-danger"><i class="glyphicon glyphicon-exclamation-sign"></i>&nbsp;亲,你真的要离开我了吗???</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-danger btn_logout">退出</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<div class="modal fade addModal" tabindex="-1">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                <h4 class="modal-title">添加分类</h4>
+            </div>
+            <form>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                <span class="choose_first">请选择一级分类</span>
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <!--挖坑埋人-->
+                            </ul>
+
+                        </div>
+                        <input type="hidden" name="categoryId" id="categoryId">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="brandName" name="brandName" placeholder="请输入二级分类名称...">
+                    </div>
+                    <div class="form-group">
+                        <label class="btn btn-default" for="fileupload">上传图片</label>
+                        <input type="file" name="pic1" id="fileupload" style="display: none;" data-url="/category/addSecondCategoryPic">
+                    </div>
+                    <div class="form-group">
+                        <img class="fileImg" src="./images/none.png" alt="" width="100" height="100">
+                        <input type="hidden" name="brandLogo" id="brandLogo">
+                        <input type="hidden" name="hot" id="hot" value="1">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="reset" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="submit" class="btn btn-primary btn_ok">确定</button>
+                </div>
+            </form>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<script type="text/html" id="tpl">
+    {{each rows v i}}
+    <tr>
+        <td>{{(page-1)*size + i + 1}}</td>
+        <td>{{v.categoryName}}</td>
+        <td>{{v.brandName}}</td>
+        <td><img src="{{v.brandLogo}}" alt="" width="50" height="50"></td>
+    </tr>
+    {{/each}}
+</script>
+<script type="text/html" id="tpl_drop">
+    {{each rows v}}
+    <li><a href="#" data-id="{{v.id}}">{{v.categoryName}}</a></li>
+    {{/each}}
+</script>
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/bootstrap/js/bootstrap.js"></script>
+<script src="./lib/bootstrap-validator/js/bootstrapValidator.js"></script>
+<script src="./lib/nprogress/nprogress.js"></script>
+<script src="lib/bootstrap-paginator/bootstrap-paginator.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
+<script src="lib/jquery-fileupload/jquery.ui.widget.js"></script>
+<script src="lib/jquery-fileupload/jquery.fileupload.js"></script>
+<script src="js/commen.js"></script>
+<script src="./js/second.js"></script>
 </body>
 </html>

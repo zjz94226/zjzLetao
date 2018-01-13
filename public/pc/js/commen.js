@@ -33,6 +33,7 @@
     $('.icon_menu').on('click', function () {
         $('.lt_main').toggleClass('now');
         $('.lt_aside').toggleClass('now');
+        $('.lt_main .lt_header').toggleClass('now');
     });
     //退出图标按钮
     $('.icon_out').on('click', function () {

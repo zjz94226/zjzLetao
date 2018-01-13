@@ -1,8 +1,7 @@
 /**
  * Created by Administrator on 2018/1/13.
  */
-<<<<<<< HEAD
-=======
+
 $(function () {
     var page = 1;
     var pageSize = 5;
@@ -56,7 +55,7 @@ $(function () {
         }
     });
     //提交
-    $('.btn_ok').on('click', function (e) {
+    $('form').on('success.form.bv', function (e) {
         e.preventDefault();
 
         $.ajax({
@@ -74,6 +73,8 @@ $(function () {
             }
         });
     });
-  
+    $('.modal-footer [type="reset"]').on('click',function(){
+        $('form').data('bootstrapValidator').resetForm(true);
+
+    });
 });
->>>>>>> first
