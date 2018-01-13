@@ -36,20 +36,25 @@ $(function () {
     $('tbody').on('click','.btn', function () {
         var isDelete = $(this).parent().data('del');
         var id = $(this).parent().data('id');
-        console.log(isDelete,id);
-        $.ajax({
-            type: 'post',
-            url:'/user/updateUser',
-            data: {
-                id:id,
-                isDelete:isDelete===0?1:0
-            },
-            success: function (info) {
-                //console.log(info);
-                if(info.success){
-                    render();
+        $('.changeModal').modal('show');
+        $('.btn_ok').off().on('click', function () {
+            $.ajax({
+                type: 'post',
+                url:'/user/updateUser',
+                data: {
+                    id:id,
+                    isDelete:isDelete===0?1:0
+                },
+                success: function (info) {
+                    //console.log(info);
+                    if(info.success){
+                        $('.changeModal').modal('hide');
+                        render();
+
+                    }
                 }
-            }
+            });
         });
+
     });
 });
