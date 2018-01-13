@@ -75,4 +75,16 @@ $(function () {
         });
         //使用ajax提交逻辑
     });
+    $('[type="reset"]').on('click', function () {
+        $form.data('bootstrapValidator').resetForm();
+    });
+
+
+
+
+
+
+
+
+
 });

@@ -12,7 +12,16 @@
 
     //判断是否登录
     if(location.href.indexOf('login.html') < 0){
-        
+        $.ajax({
+            type:'get',
+            url: '/employee/checkRootLogin',
+            datatype:'json',
+            success: function (info) {
+                if(info.error){
+                    location.href = 'login.html';
+                }
+            }
+        });
     }
 
 

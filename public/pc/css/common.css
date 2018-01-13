@@ -96,3 +96,23 @@ html,body {
     padding: 15px 20px;
     color: #fff;
 }
+
+.lt_main .breadcrumb {
+    padding: 18px 20px;
+    background-color: #fff;
+}
+.lt_main .breadcrumb a {
+     /*font-size: 18px;*/
+ }
+
+.lt_main .echart {
+    width: 100%;
+    overflow: hidden;
+    padding: 0 20px;
+}
+.lt_main .echart .ec_left,
+.lt_main .echart .ec_right {
+    width: 45%;
+    height: 400px;
+    
+}
