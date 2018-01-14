@@ -1,0 +1,33 @@
+.lt_main {
+    height: 100%;
+    position: relative;
+}
+
+.lt_main  .lt_nav {
+    padding:10px;
+}
+.lt_main  ul li {
+    width: 33.33%;
+    float: left;
+}
+.lt_product {
+    padding: 10px;
+}
+.lt_product a {
+    display: block;
+    width: 48%;
+    border: 1px solid #ccc;
+    text-align: center;
+    padding:10px;
+    float: left;
+    margin-bottom: 20px;
+}
+.lt_product a:nth-of-type(odd) {
+    margin-right: 4%;
+}
+.lt_product  .price  span:first-of-type {
+    color: red;
+}
+.lt_product  .price  span:last-of-type {
+    text-decoration: line-through;
+}
