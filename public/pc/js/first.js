@@ -22,6 +22,35 @@ $(function () {
                     currentPage:page,//当前页
                     totalPages:Math.ceil(info.total/info.size),//总页数
                     //size:"small",//设置控件的大小，mini, small, normal,large
+                    useBootstrapTooltip:true,
+                    tooltipTitles: function (type,page,current) {
+                        switch(type){
+                            case 'first':
+                                return '首页';
+                            case 'last':
+                                return '末页';
+                            case 'page':
+                                return '去第'+page+'页';
+                            case 'prev':
+                                return '上一页';
+                            case 'next':
+                                return  '下一页';
+                        }
+                    },
+                    itemTexts: function (type,page,current) {
+                        switch(type){
+                            case 'first':
+                                return '首页';
+                            case 'last':
+                                return '末页';
+                            case 'page':
+                                return page;
+                            case 'prev':
+                                return '上一页';
+                            case 'next':
+                                return  '下一页';
+                        }
+                    },
                     onPageClicked:function(event, originalEvent, type,p){
                         //为按钮绑定点击事件 page:当前点击的按钮值
                         page = p;

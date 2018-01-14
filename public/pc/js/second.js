@@ -20,6 +20,35 @@ $(function () {
                     bootstrapMajorVersion: 3,
                     currentPage:page,
                     totalPages: Math.ceil(info.total/info.size),
+                    useBootstrapTooltip:true,
+                    tooltipTitles: function (type,page,current) {
+                        switch(type){
+                            case 'first':
+                                return '首页';
+                            case 'last':
+                                return '末页';
+                            case 'page':
+                                return '去第'+page+'页';
+                            case 'prev':
+                                return '上一页';
+                            case 'next':
+                                return  '下一页';
+                        }
+                    },
+                    itemTexts: function (type,page,current) {
+                        switch(type){
+                            case 'first':
+                                return '首页';
+                            case 'last':
+                                return '末页';
+                            case 'page':
+                                return page;
+                            case 'prev':
+                                return '上一页';
+                            case 'next':
+                                return  '下一页';
+                        }
+                    },
                     onPageClicked: function (a,s,d,p) {
                         page = p;
                         render();
