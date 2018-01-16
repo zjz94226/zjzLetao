@@ -21,6 +21,10 @@ html,body {
     padding: 45px 0 55px;
     position: relative;
 }
+.lt_main {
+    height: 100%;
+    position: relative;
+}
 
 .lt_header {
     width: 100%;
@@ -38,12 +42,22 @@ html,body {
     line-height: 45px;
     /*text-align: center;*/
     color: #fff;
+    position: absolute;
+}
+.lt_header .head_left {
+    left:0;
+}
+.lt_header .head_cart {
+    right: 0;
 }
 
 .lt_header h4 {
     line-height: 45px;
     margin: 0;
     color: #fff;
+    /*overflow: hidden;*/
+    height: 45px;
+
 }
 
 
@@ -75,4 +89,50 @@ html,body {
 }
 .lt_footer a {
     color: #fff;
+}
+
+/*********搜索页面**************/
+.lt_main .lt_search,
+.lt_history {
+    padding: 10px;
+    position: relative;
+}
+.lt_search .search_text {
+    border-radius: 8px;
+    border: 1px solid #007aff;
+    font-size: 14px;
+    padding-right: 70px;
+}
+.lt_search .search_btn {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    height: 40px;
+    width: 70px;
+    border-radius: 0 8px 8px 0;
+    /*line-height: 34px;*/
+}
+
+
+/**********商品展示列表**************/
+.lt_product {
+    padding: 10px;
+}
+.lt_product a {
+    display: block;
+    width: 48%;
+    border: 1px solid #ccc;
+    text-align: center;
+    padding:10px;
+    float: left;
+    margin-bottom: 20px;
+}
+.lt_product a:nth-of-type(odd) {
+    margin-right: 4%;
+}
+.lt_product  .price  span:first-of-type {
+    color: red;
+}
+.lt_product  .price  span:last-of-type {
+    text-decoration: line-through;
 }

@@ -1,0 +1,49 @@
+.padding10 {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.price {
+    color: red;
+}
+.oldPrice {
+    color: #666;
+    font-size: 12px;
+    text-decoration: line-through;;
+}
+
+.pdu_size span {
+    padding: 5px;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    font-size: 12px;
+    line-height: 30px;
+}
+.pdu_size span.now {
+    background-color: #069;
+    color: #fff;
+}
+.pdu_num span {
+    font-size: 12px;
+    color: #666;
+}
+
+
+
+/**********尾部**************/
+.lt_footer {
+    background-color: #eee;
+    line-height: 55px;
+    padding: 0 10px;
+
+}
+.lt_footer .goCar {
+    color: #007aff;
+    font-size: 14px;
+    margin-left: 10px;
+}
+.lt_footer .buy {
+    height: 55px;
+    padding-top: 11px;
+    box-sizing: border-box;
+}
