@@ -19,7 +19,7 @@ $(function () {
                 mui('.mui-slider').slider({
                     interval:2000
                 });
-                mui('.mui-numbox').numbox()
+                mui('.mui-numbox').numbox();
             }
         });
     }
