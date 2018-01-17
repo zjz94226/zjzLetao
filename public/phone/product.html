@@ -32,7 +32,7 @@
         <div class="lt_footer mui-clearfix">
             <a href="javascript:;" class="goCar">去购物车</a>
             <div class="buy pull-right">
-                <button class="mui-btn mui-btn-danger">加入购物车</button>
+                <button class="mui-btn mui-btn-danger btn_add_cart">加入购物车</button>
                 <button class="mui-btn mui-btn-warning">立即购买</button>
             </div>
         </div>
@@ -72,9 +72,9 @@
         </div>
         <div class="pdu_num padding10">
             数量:
-            <div class="mui-numbox" data-numbox-step='1' data-numbox-min='0' data-numbox-max='{{num}}'>
+            <div class="mui-numbox" data-numbox-step='1' data-numbox-min='1' data-numbox-max='{{num}}'>
                 <button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
-                <input class="mui-numbox-input" type="number" value="0"/>
+                <input class="mui-numbox-input" type="number" value="1"/>
                 <button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
             </div>
             <span>库存: {{num}}双</span>

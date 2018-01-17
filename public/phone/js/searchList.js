@@ -39,6 +39,7 @@ $(function () {
     //搜索按钮
     $('.search_btn').on('click', function () {
         render();
+
     });
     //给价格 库存注册事件  可以进行排序
     $('.search_nav a[data-type]').on('click',function(){
