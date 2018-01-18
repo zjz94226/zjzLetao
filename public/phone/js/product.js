@@ -6,7 +6,7 @@ $(function () {
     render();
     function render(){
         var pduId = getParam()['pduId'];
-        console.log(pduId);
+        //console.log(pduId);
         $.ajax({
             type:'get',
             url: '/product/queryProductDetail',
@@ -33,12 +33,27 @@ $(function () {
         var size = $('.mui-scroll .pdu_size span.now').text();
         var num = $('.mui-numbox-input').val();
         var productId = getParam()['pduId'];
-        console.log(size,num,productId);
+        //console.log(size,num,productId);
         $.ajax({
             type: 'post',
             url: '/cart/addCart',
             data: {
-
+                productId:productId,
+                num:num,
+                size:size
+            },
+            success: function(info){
+                console.log(info);
+                if(info.error == 400){
+                    location.href = 'login.html?backURL='+ location.href;
+                }
+                if(info.success){
+                    mui.confirm('添加成功','温馨提示',['去购物车','继续浏览'], function (e) {
+                        if(e.index === 0){
+                            location.href='cart.html';
+                        }
+                    });
+                }
             }
         });
     });

@@ -217,6 +217,7 @@ $(function () {
                     $('.img_box img').remove();
                     $('#brandLogo').val('');
                     $('.addModal').modal('hide');
+                    imgArr = [];
                 }
             }
         });

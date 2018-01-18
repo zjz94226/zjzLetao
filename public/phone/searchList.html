@@ -53,13 +53,13 @@
                     </a>
                 </li>
                 <li>
-                    <a href="javascript:;">
+                    <a href="cart.html>
                         <i class="fa fa-shopping-cart"></i>
                         <p>购物车</p>
                     </a>
                 </li>
                 <li>
-                    <a href="javascript:;">
+                    <a href="user.html">
                         <i class="fa fa-user"></i>
                         <p>会员中心</p>
                     </a>
@@ -73,7 +73,7 @@
         {{/if}}
         {{each data v i}}
         <a href="product.html?pduId={{v.id}}">
-            <img src="{{v.pic[0].picAddr}}" alt="" width="162" height="162">
+            <img src="{{v.pic[0].picAddr}}" alt="">
             <p class="mui-ellipsis-2 mui-text-left proName">{{v.proName}}</p>
             <p class="price"><span>&yen;{{v.price}}</span> <span>&yen;{{v.oldPrice }}</span></p>
             <button class="mui-btn mui-btn-primary">立即购买</button>
