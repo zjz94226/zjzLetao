@@ -1,0 +1,45 @@
+form {
+    margin-bottom:20px;
+}
+.vcode {
+    position: relative;
+}
+.vcode input {
+    width: 65%;
+
+}
+.vcode .get_vcode {
+    width: 30%;
+}
+.mui-input-row {
+    margin-bottom:15px;
+}
+.mui-input-row input {
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 5px;
+}
+.mui-input-group {
+    padding: 10px;
+}
+.mui-input-group  .mui-input-row:after{
+    height: 0;
+}
+.btn_reg {
+    width: 100%;
+}
+.mui-input-group:before ,
+.mui-input-group:after {
+    height: 0;
+}
+.form_foot {
+    font-size: 12px;
+}
+.form_foot a {
+    font-size: 12px;
+}
+
+
+.get_vcode.disabled {
+    background-color: #999;
+    border: 1px solid #999;
+}

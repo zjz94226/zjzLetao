@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="lib/fa/css/font-awesome.css">
     <link rel="stylesheet" href="lib/mui/css/mui.css">
     <link rel="stylesheet" href="css/commen.css">
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/register.css">
 </head>
 <body>
     <div class="lt_container">
@@ -19,19 +19,31 @@
         <div class="lt_main">
             <form class="mui-input-group">
                 <div class="mui-input-row">
-                    <label>用户名</label>
-                    <input type="text" class="mui-input-clear"  placeholder="请输入用户名">
+                    <input type="text" class="mui-input-clear" name="username"  placeholder="请输入用户名" autocomplete="off">
                 </div>
                 <div class="mui-input-row">
-                    <label>密码</label>
-                    <input type="password" class="mui-input-password"  placeholder="请输入密码">
+                    <input type="password" class="mui-input-password" name="password" placeholder="请输入密码">
+                </div>
+                <div class="mui-input-row">
+                    <input type="password" class="mui-input-password second_pwd"  placeholder="请再次输入密码">
+                </div>
+                <div class="mui-input-row">
+                    <input type="number" class="mui-input-clear" name="mobile"  placeholder="请输入手机号">
+                </div>
+                <div class="mui-input-row vcode">
+                    <input type="text"   name="vCode" placeholder="请输入验证码">
+                    <button  class="mui-btn mui-btn-primary get_vcode">获取验证码</button>
                 </div>
                 <div class="mui-button-row">
-                    <button type="submit" class="mui-btn mui-btn-primary btn_confirm" >登录</button>
-                    <button type="reset" class="mui-btn mui-btn-danger" >重置</button>
+                    <button type="submit" class="mui-btn mui-btn-primary btn_confirm btn_reg" >注册</button>
                 </div>
+                <div class="form_foot">
+                    <input type="checkbox" name="" id="" checked><span>我同意&lt;&lt;会员服务协议&gt;&gt;</span>
+                    <a href="register.html" class="mui-pull-right" style="" >立即登录</a>
+                </div>
+
             </form>
-            <a href="register.html" class="mui-pull-right" >免费注册</a>
+
         </div>
         <div class="lt_footer">
             <ul>
@@ -71,5 +83,5 @@
 <script src="lib/mui/js/mui.js"></script>
 <script src="lib/artTemplate/template-web.js"></script>
 <script src="js/commen.js"></script>
-<script src="js/login.js"></script>
+<script src="js/register.js"></script>
 </html>
